@@ -1,10 +1,10 @@
 import express from "express";
 import { Dog } from "../models/dogModel.js";
 
-const routerRouter = express.Router();
+const dogsRouter = express.Router();
 
 //Route for Save a new Dog
-routerRouter.post("/", async (request, response)=>{
+dogsRouter.post("/", async (request, response)=>{
     try {
         if(
             !request.body.name ||
@@ -37,7 +37,7 @@ routerRouter.post("/", async (request, response)=>{
 })
 
 // Route for Get all dogs from database
-routerRouter.get("/", async (request, response)=>{
+dogsRouter.get("/", async (request, response)=>{
     try {
         const dogs = await Dog.find({})
         return response.status(200).json({
@@ -51,7 +51,7 @@ routerRouter.get("/", async (request, response)=>{
 })
 
 // Route for One dog from database
-routerRouter.get("/:id", async(request, response)=>{
+dogsRouter.get("/:id", async(request, response)=>{
     try {
         const {id} = request.params;
 
@@ -64,7 +64,7 @@ routerRouter.get("/:id", async(request, response)=>{
 })
 
 // Route to update a dog
-routerRouter.put("/:id", async(request, response)=>{
+dogsRouter.put("/:id", async(request, response)=>{
     try {
         if(
             !request.body.name ||
@@ -94,7 +94,7 @@ routerRouter.put("/:id", async(request, response)=>{
 })
 
 // Route for delete a book 
-routerRouter.delete("/:id", async(request, response)=>{
+dogsRouter.delete("/:id", async(request, response)=>{
     try {
         const {id} = request.params;
         const result = await Dog.findByIdAndDelete(id);
@@ -109,4 +109,4 @@ routerRouter.delete("/:id", async(request, response)=>{
     }
 })
 
-export default routerRouter;
+export default dogsRouter;

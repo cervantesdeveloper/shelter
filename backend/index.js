@@ -1,7 +1,8 @@
 import express from "express";
 import { PORT, mongoDBURL } from "./config.js";
 import mongoose from "mongoose";
-import dogRouter from "./routes/dogsRoute.js"
+import dogsRouter from "./routes/dogsRoute.js";
+import newsRouter from "./routes/newsRoute.js";
 import cors from "cors";
 
 const app = express();
@@ -17,8 +18,8 @@ app.get("/", (request, response)=>{
     return response.status(234).send("Welcome to MERN Stack tutorial")
 });
 
-app.use("/api/dogs", dogRouter);
-
+app.use("/api/dogs", dogsRouter);
+app.use("/api/news", newsRouter);
 
 mongoose
     .connect(mongoDBURL)
