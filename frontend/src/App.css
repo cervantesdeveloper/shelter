@@ -1,3 +1,55 @@
+/******************** burger star ********************/
+.burger {
+    position: relative;
+    width: 1.875rem;
+    height: 1.25rem;
+    cursor: pointer;
+  }
+  
+  .burger span{
+    position: absolute;
+    height: .25rem;
+    width: 100%;
+    background-color: var(--black);
+    transition: 
+      transform .3s ease-in-out, 
+      opacity .3s ease-in-out, 
+      width .3s ease-in-out
+    ;
+  }
+  
+  .burger span:nth-child(2){
+    top: .5rem;
+  }
+  
+  .burger span:last-child{
+    bottom: 0;
+  }
+  
+  .burger.times span{
+    top: .5rem;
+    transition: 
+      transform .3s ease-in-out,
+      opacity .3s ease-in-out,
+      width .3s ease-in-out
+    ;
+  }
+  
+  .burger.times span:first-child {
+    transform: rotate(45deg)
+  }
+  
+  .burger.times span:nth-child(2) {
+    opacity: 0
+  }
+  
+  .burger.times span:last-child {
+    transform: rotate(-45deg)
+  }
+  
+
+/******************** burger end ********************/
+
 /******************** header star ********************/
 
 .header{
@@ -72,6 +124,73 @@
 
 
 /******************** header end ********************/
+
+/******************** nav movle start ********************/
+.nav-mobile{
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    height: calc(100vh - var(--header-height));
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 1.5rem;
+    background-color: var(--white);
+    transform: translateX(-100%);
+    transition: transform .5s ease-in-out; 
+    overflow-y: auto;
+}
+
+.nav-mobile a:not(:last-child){
+    color: var(--black);
+    font-family: var(--paragraphs);
+    line-height: 4rem;
+    font-size: 1.3125rem;
+    font-weight: 700;
+}
+
+.nav-mobile a::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: .125rem;
+    background-color: var(--green);
+    transition: width .3s ease-in-out;
+}
+
+.nav-mobile a:last-child{
+    
+    margin-top: auto;
+    align-self: center;
+}
+
+.nav-mobile a.active{
+    color: var(--green);
+}
+
+.nav-mobile a.active::after{
+    width: 3rem;
+}
+
+.nav-mobile.open{
+    transform: translateX(0);
+}
+
+@media (min-width: 768px) {
+    .nav-mobile{
+        height: max-content;
+        align-items: center;
+    }
+
+    .nav-mobile a:last-child{
+        margin-top: 4rem;
+    }
+}
+
+
+
+/******************** nav movle start ********************/
 
 /******************** utilities start ********************/
 
