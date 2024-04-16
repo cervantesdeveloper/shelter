@@ -1,3 +1,28 @@
+:root{
+  /*colors*/
+  --black: #1F2526;
+  --green: #6D7345;
+  --orange: #BF5630;
+  --white: #F0F2F2;
+
+  /*Fonts*/
+  --paragraphs: "Raleway", sans-serif;
+  --headers: "Noto Serif", serif;
+
+  /*measures */
+  --header-height: 3.125rem;
+
+  /*utlities*/
+  --border-test: .5px dashed red;
+}
+
+@media (min-width: 1044px) {
+  :root{
+    /*measures*/
+    --header-height: 6.25rem;
+  }
+}
+
 html {
   box-sizing: border-box;
 }
@@ -6,4 +31,12 @@ html {
 *::before,
 *::after{
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
+
+a{
+  text-decoration: none;
+  font-family: var(--paragraphs);
+}
+

@@ -1,5 +1,9 @@
 import react from 'react'
-import {Routes, Route} from "react-router-dom"
+import {
+  BrowserRouter, 
+  Routes, 
+  Route
+} from "react-router-dom"
 
 
 import './App.css'
@@ -9,10 +13,15 @@ import Volunteering from "./pages/Volunteering"
 import About from './pages/About'
 import News from './pages/News'
 import Donate from './pages/Donate'
+import Header from './components/Header'
+
+import { DeviceProvider } from './context/DeviceContext'
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
+    <DeviceProvider>
+      <Header />
       <Routes>
         <Route index element={<Home />}/>
         <Route path='adopt' element={<Adopt />}/>
@@ -21,7 +30,8 @@ function App() {
         <Route path='news' element={<News />} />
         <Route path='donate' element={<Donate />}/>
       </Routes>
-    </>
+    </DeviceProvider>
+    </BrowserRouter>
   )
 }
 
