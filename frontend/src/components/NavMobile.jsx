@@ -14,7 +14,6 @@ const NavMobile = () => {
                 <NavLink to="volunteering"> Ser Voluntario </ NavLink>
                 <NavLink to="about"> Acerca de nosotros </ NavLink>
                 <NavLink to="news"> Noticias </ NavLink>
-                <ButtonDonate />
             </nav>
     )
 }

@@ -16,12 +16,12 @@ const Header = () => {
     <header className='header container'>
       <div className="contained">
         <Link className='header__logo' to="/" >
-            Dog Shelter
+            Santuario
         </Link>
         {
           isMobil
-          ? (<><HeaderNavDesktop /> <ButtonDonate /></>)
-          : <Burger handleClick={handleClick} isOpen={isOpen}/>
+          ?  <Burger handleClick={handleClick} isOpen={isOpen}/>
+          :  (<><HeaderNavDesktop /> <ButtonDonate /></>)
         }
         
         

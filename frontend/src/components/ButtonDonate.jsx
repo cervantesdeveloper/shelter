@@ -8,7 +8,7 @@ const ButtonDonate = () => {
         <Link to={"/donate"}>
             <div className='btn cta'>
                 <img src={heart} className='btn__icon'></img>
-                Donate
+                Donar
             </div>
         </Link>
     )

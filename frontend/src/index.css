@@ -10,13 +10,13 @@
   --headers: "Noto Serif", serif;
 
   /*measures */
-  --header-height: 4.6875rem;
+  --header-height: 5rem;
 
   /*utlities*/
   --border-test: .5px dashed red;
 }
 
-@media (min-width: 1044px) {
+@media (min-width: 768px) {
   :root{
     /*measures*/
     --header-height: 6.25rem;
@@ -25,6 +25,7 @@
 
 html {
   box-sizing: border-box;
+  background-color: var(--white);
 }
 
 *,

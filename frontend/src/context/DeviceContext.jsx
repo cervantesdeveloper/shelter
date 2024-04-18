@@ -3,7 +3,7 @@ import { createContext, useState } from "react";
 const DeviceContext = createContext();
 
 const DeviceProvider = ({children})=>{
-    let breakpoint = window.matchMedia("(min-width: 1024px)");
+    let breakpoint = window.matchMedia("(max-width: 1023px)");
 
     const [isMobil, setIsMobil] = useState(breakpoint.matches);
 
