@@ -131,6 +131,7 @@
 
 /******************** Home hero start ********************/
 .home-hero{
+    z-index: -1;
     position: relative;
     width: 100%;
     max-height: calc(100vh - var(--header-height) );
@@ -188,6 +189,77 @@
 
 
 /******************** Home hero end ********************/
+
+/******************** Home quote start ********************/
+.home-quote blockquote{
+    font-family: var(--paragraphs);
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.home-quote p{
+    text-align: center;
+}
+
+.home-quote p{
+    margin: 2.1875rem 0;
+}
+
+@media (min-width: 768px) {
+    .home-quote blockquote,
+    .home-quote p{
+        font-size: 1.5rem;
+        line-height: 2;
+    }
+}
+
+/******************** Home quote end ********************/
+
+/******************** Home values start ********************/
+
+.home-values_value:first-child{
+    padding-bottom: 2.1875rem;
+    border-bottom: 1px solid var(--white);
+}
+
+.home-values_value p {
+    text-align: center;
+    margin-bottom: 2.1875rem;
+}
+
+.home-values_value a div{
+    margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+    .home-values__values{
+        display: flex;
+    }
+
+    .home-values_value:first-child{
+        width: 50%;
+        border-bottom: none;
+        border-right: 1px solid var(--white);
+        padding-bottom: 0;
+        padding-right: 1.5rem;
+    }
+
+    .home-values_value{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .home-values_value:last-child{
+        width: 50%;
+        padding-left: 1.5rem;
+    }
+
+   
+}
+/******************** Home values end ********************/
 
 /******************** nav movle start ********************/
 .nav-mobile{
@@ -306,5 +378,44 @@
         padding: 1.5rem 7.5rem;
     }
 }
+/* section */
+section.light{
+    color: var(--black);
+}
+
+section.dark{
+    background-color: var(--black);
+    color: var(--white);
+}
+
+section.light span{
+    color: var(--green);
+}
+
+section.dark span{
+    color: var(--orange);
+}
+
+section h3{
+    font-family: var(--paragraphs);
+    font-size: 1.75rem;
+    line-height: 1.2;
+    text-align: center;
+    margin: 2.1875rem 0;
+}
+
+section p{
+    font-family: var(--paragraphs);
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.8;
+}
+
+@media (min-width: 768px) {
+    section h3{
+        font-size: 3.125rem;
+    }
+}
+
 
 /******************** utilities end ********************/
