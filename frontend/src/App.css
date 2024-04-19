@@ -217,6 +217,56 @@
 
 /******************** Home quote end ********************/
 
+/******************** Home stats start ********************/
+.stat{
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    color: var(--white);
+  }
+  
+  .stat img{
+    width: 100%;
+    height: auto;
+  }
+  
+  .stat .data{
+    width: 100%;
+    bottom: 0;
+    padding: 0 1rem 2rem;
+    position: absolute;
+    font-family: var(--paragraphs);
+    background: var(--black);
+    background: linear-gradient(0deg, var(--black) 0%, rgba(255,255,255,0) 100%);
+  }
+  
+  .stat b{
+    font-size: 2.5rem;
+    line-height: 1;
+  }
+  
+  .stat p{
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+
+  .stats-grid{
+    margin: var(--header-height) 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 50vw);
+  }
+  
+  
+  @media (min-aspect-ratio: 4/3) {
+    .stats-grid{
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 25vw;
+    }
+  }
+  
+/******************** Home stats end ********************/
+
 /******************** Home values start ********************/
 
 .home-values_value:first-child{

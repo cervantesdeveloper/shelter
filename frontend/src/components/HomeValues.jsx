@@ -15,7 +15,7 @@ const HomeValues = () => {
                 <div className="home-values_value">
                     <h3>Ayudanos a <span>salvar</span> vidas</h3>
                     <p>¡Únete a nuestro equipo de voluntarios y sé parte del cambio positivo en la vida de los perros! Ya sea que puedas dedicar unas pocas horas a la semana o participar en eventos especiales, tu ayuda es invaluable para nosotros.!</p>
-                    <ButtonCTA text={"Conocenos"} link={"/volunteering"}/>
+                    <ButtonCTA text={"Ser voluntario"} link={"/volunteering"}/>
                 </div>
             </div>
         </div>
