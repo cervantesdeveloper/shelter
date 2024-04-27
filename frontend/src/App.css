@@ -50,10 +50,67 @@
 
 /******************** burger end ********************/
 
+/******************** Card adoption start ********************/
+.card-adoption{
+    max-width: 21rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: var(--paragraphs);
+    margin-bottom: 3rem;
+    background-color: var(--white);
+    color: var(--black);
+    border: 1px solid var(--green);
+  }
+
+  .card-adoption__title h4{
+    font-size: 1.25rem;
+  }
+  
+  .card-adoption__title,
+  .card-adoption__suporting-text{
+    padding: 1rem;
+  }
+  
+  .card-adoption__picture{
+    aspect-ratio: 1.618/1;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card-adoption img{
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .card-adoption__suporting-text{
+    font-weight: 700;
+  }
+  
+  .card-adoption__suporting-text ul{
+    list-style: none;
+    text-align: left;
+    font-size: 1rem;
+    line-height: 2;
+    
+  }
+
+  .card-adoption a{
+    margin: 0 auto 1.5rem;
+  }
+
+  .card-adoption .card-adoption__suporting-text span{
+    color: var(--green);
+  }
+
+/******************** Card adoption end ********************/
+
 /******************** header star ********************/
 
 .header{
     position: fixed;
+    z-index: 100;
     left: 0;
     top: 0;
     width: 100%;
@@ -129,6 +186,27 @@
 }
 /******************** header end ********************/
 
+/******************** Home adopt start ********************/
+
+.adopt-home{
+    text-align: center;
+  }
+  
+  @media (min-width: 1024px) {
+      .adopt-home__gallery{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 5rem;
+      }
+  
+      .adopt-home__gallery > *{
+        margin-left: 0;
+        margin-right: 0;
+      }
+  }
+  
+/******************** Home adopt end ********************/
+
 /******************** Home hero start ********************/
 .home-hero{
     z-index: -1;
@@ -187,7 +265,6 @@
     }
 }
 
-
 /******************** Home hero end ********************/
 
 /******************** Home quote start ********************/
@@ -218,6 +295,9 @@
 /******************** Home quote end ********************/
 
 /******************** Home stats start ********************/
+.home-stats{
+    padding: var(--header-height) 0;
+}
 .stat{
     position: relative;
     height: 100%;
@@ -251,7 +331,6 @@
   }
 
   .stats-grid{
-    margin: var(--header-height) 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 50vw);
@@ -310,6 +389,54 @@
    
 }
 /******************** Home values end ********************/
+
+/******************** Icon plus start **************************/
+
+.plus-icon {
+  position: relative;
+  width: 1.875rem;
+  height: 1.875rem;
+  z-index: 80;
+  cursor: pointer;
+}
+
+.plus-icon span{
+  position: absolute;
+  height: .25rem;
+  width: 100%;
+  transition: 
+    transform .3s ease-in-out, 
+    opacity .3s ease-in-out, 
+    width .3s ease-in-out
+  ;
+} 
+
+.plus-icon span:first-child{
+  top: .8125rem;
+  left: 0;
+  transform: rotate(90deg);
+  
+}
+
+.plus-icon span:last-child{
+  top: .8125rem;
+  left: 0;
+}
+
+.plus-icon.minus-icon span{
+  transition: 
+    transform .3s ease-in-out,
+    opacity .3s ease-in-out,
+    width .3s ease-in-out
+  ;
+}
+
+.plus-icon.minus-icon span:first-child,
+.plus-icon.minus-icon span:last-child {
+  transform: rotate(0deg)
+}
+
+/******************** Icon plus end **************************/
 
 /******************** nav movle start ********************/
 .nav-mobile{
@@ -379,6 +506,31 @@
 
 /******************** nav movle start ********************/
 
+
+/******************** Loading start **************************/
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 50px;
+  padding: 8px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--orange);
+  --_m: 
+    conic-gradient(#0000 10%,#000),
+    linear-gradient(#000 0 0) content-box;
+  -webkit-mask: var(--_m);
+          mask: var(--_m);
+  -webkit-mask-composite: source-out;
+          mask-composite: subtract;
+  animation: l3 1s infinite linear;
+  margin-left: auto;
+  margin-right: auto;
+}
+@keyframes l3 {to{transform: rotate(1turn)}}
+@keyframes l4 {to{clip-path: inset(0 -1ch 0 0)}}
+
+/******************** Loading end **************************/
+
 /******************** utilities start ********************/
 
 .btn{
@@ -394,6 +546,19 @@
 .btn__icon{
     margin-right: 1rem;
     height: 1.125rem;
+}
+
+.btn-outlined{
+  border: .5px solid var(--green);
+  color: var(--green);
+  transition: 
+    background-color .3s ease-in-out,
+    color .3s ease-in-out;
+}
+
+.btn-outlined:hover{
+  background-color: var(--green);
+  color: var(--white);
 }
 
 .cta{
@@ -428,6 +593,9 @@
         padding: 1.5rem 7.5rem;
     }
 }
+
+
+  
 /* section */
 section.light{
     color: var(--black);
@@ -466,6 +634,8 @@ section p{
         font-size: 3.125rem;
     }
 }
+
+
 
 
 /******************** utilities end ********************/
