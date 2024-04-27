@@ -4,6 +4,7 @@ import HomeQuote from '../components/HomeQuote'
 import HomeValues from '../components/HomeValues'
 import HomeStats from '../components/HomeStats'
 import HomeAdopt from '../components/HomeAdopt'
+import HomeNews from '../components/HomeNews'
 
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
             <HomeValues />
             <HomeStats />
             <HomeAdopt />
+            <HomeNews />
         </>
     )
 }

@@ -53,6 +53,7 @@
 /******************** Card adoption start ********************/
 .card-adoption{
     max-width: 21rem;
+    min-width: 16rem;
     margin-left: auto;
     margin-right: auto;
     font-family: var(--paragraphs);
@@ -102,6 +103,12 @@
 
   .card-adoption .card-adoption__suporting-text span{
     color: var(--green);
+  }
+
+  @media (min-width: 1044px) {
+    .card-adoption{
+        min-width: 20.4375rem;
+    }
   }
 
 /******************** Card adoption end ********************/
@@ -196,12 +203,8 @@
       .adopt-home__gallery{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        column-gap: 5rem;
-      }
-  
-      .adopt-home__gallery > *{
-        margin-left: 0;
-        margin-right: 0;
+        column-gap: 2.5rem;
+        justify-items: center;
       }
   }
   
@@ -266,6 +269,58 @@
 }
 
 /******************** Home hero end ********************/
+
+/******************** Home news start ********************/
+
+.home-news__content{
+  margin: 3rem 0;
+}
+.home-news__title{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem 0;
+ }
+ 
+ .home-news__title h3{
+   font-size: 3.125rem;
+   margin-bottom: 1.125rem;
+ }
+ 
+ .home-news__title p{
+   font-size: 1.125rem;
+   line-height: 2;
+   margin-bottom: 2.25rem;
+ }
+
+ .home-news__title a{
+  margin: 0 auto;
+ }
+ 
+ @media (min-width: 1024px) {
+  .home-news__title{
+    padding: 3rem 1.5rem;
+  }
+    .home-news{
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+    }
+
+    .home-news__content{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+    .home-news__content .news-card{
+        margin-bottom: 0;
+    }
+ }
+ 
+ 
+/******************** Home news end ********************/
 
 /******************** Home quote start ********************/
 .home-quote blockquote{
@@ -531,6 +586,64 @@
 
 /******************** Loading end **************************/
 
+/******************** news-card start ********************/
+.news-card{
+  border: 1px solid var(--green);
+  max-width: 21rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3rem;
+  overflow: hidden;
+}
+
+.news-card__media {
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  text-align: center;
+}
+
+.news-card__media > img{
+  width: 100%;
+  height: auto;
+}
+
+.news-card__title{
+  padding: 1.5rem;
+  overflow: hidden;
+  font-family: var(--paragraphs);
+  font-size: 1.25rem;
+}
+
+.news-card__summary{
+  height: 4.5rem;
+  overflow: hidden;
+  font-family: var(--paragraphs);
+  padding: 0 1.5rem;
+
+}
+.news-card__summary p{
+  font-size: 1rem;
+  line-height: 1.5;
+
+  background-image: linear-gradient(0deg, #ffffff90 0 11%, var(--black) 33% 100%);
+ 
+  background-size: 100% 72px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.news-card__date p{
+  padding: 1rem 1.5rem;
+  font-size: .75rem;
+  line-height: 2;
+}
+
+
+/******************** news-card end ********************/
+
 /******************** utilities start ********************/
 
 .btn{
@@ -554,12 +667,57 @@
   transition: 
     background-color .3s ease-in-out,
     color .3s ease-in-out;
+  font-weight: 600;
 }
 
 .btn-outlined:hover{
   background-color: var(--green);
   color: var(--white);
+  
 }
+
+.btn-text,
+.btn-text__prev-next{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.7rem;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  font-weight: 700;
+  color: var(--green);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-text{
+  width: 12rem;
+}
+
+.btn-text:hover img{
+  transform: translateX(.5rem);
+}
+
+.btn-text img{
+  height: 1.5rem;
+  margin-left: 1rem;
+  transition: transform .3s ease-in-out;
+}
+
+.btn-text__prev-next img{
+  height: 1.5rem;
+  margin: 0 1rem;
+  transition: transform .3s ease-in-out;
+}
+
+.btn-text__prev-next:hover img{
+  transform: translateX(.5rem);
+}
+
+.btn-text__prev-next:hover .arrow-left{
+  transform: translateX(-.5rem);
+}
+
 
 .cta{
     background: var(--orange);

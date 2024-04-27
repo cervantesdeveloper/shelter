@@ -1,13 +1,14 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useContext} from 'react';
 
 import AdoptCard from './AdoptCard.jsx';
 import IconLoading from './IconLoading.jsx';
 
 
+
+
 const HomeAdopt = () => {
     const [dogs, setDogs] = useState([]);
     const [loading, setLoading] = useState(false);
-
     
 
     useEffect(()=>{
@@ -17,9 +18,10 @@ const HomeAdopt = () => {
             const getDogs = async(link)=>{
                 let res = await fetch(link),
                     json = await res.json();
-    
+                
                 setDogs(json.data)
                 setLoading(false);
+                
             }
     
             getDogs("http://localhost:5555/api/dogs")
