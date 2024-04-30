@@ -752,6 +752,49 @@
     }
 }
 
+/* pages  start*/
+.pages-hero{
+  margin-top: var(--header-height);
+  position: relative;
+  overflow: hidden;
+  height: calc((100vh - var(--header-height)) * .75);
+}
+
+.pages-hero > img{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  object-fit: cover;
+}
+
+.pages-hero h1{
+  font-family: var(--paragraphs);
+  position: absolute;
+  left: 6.25vw;
+  top: 12.5%;
+  font-size: 16vw;
+  line-height: 1;
+  color: var(--white-transparent);
+  text-shadow: 0 0 .25rem #1F252688;
+}
+
+
+@media (min-width: 1024px) {
+  .pages-hero h1{
+    font-size: 8vw;
+  }
+
+  
+  .pages-hero > img{
+    width: 100%;
+  }
+  
+}
+
+
+/* pages end */
+
 
   
 /* section */

@@ -15,9 +15,6 @@ const NewsCard = ({picture, title, date, summary, id}) => {
         return months[parseInt(monthNumber) - 1]
     }
 
-    console.log(day, monthNumber, year)
-
-
     return (
         <figure className='news-card'>
             <div className="news-card__media">
@@ -33,7 +30,7 @@ const NewsCard = ({picture, title, date, summary, id}) => {
                 <p>{`${day} de ${month(monthNumber)} del ${year}`}</p>
             </div>
             
-            <TextLink text="Leer Más" link={`/news/note/${id}`}/>
+            <TextLink text="Leer Más" link={`/news/${id}`}/>
         </figure>
     )
 }

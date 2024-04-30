@@ -1,10 +1,11 @@
 import React from 'react'
+import PagesHero from '../components/PagesHero'
 
 const Adopt = () => {
     return (
-        <div>
-        Adopt content
-        </div>
+        <>
+            <PagesHero image="adopt_hero.jpg" text="adopta un perro"/>
+        </>
     )
 }
 

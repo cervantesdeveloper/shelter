@@ -4,6 +4,7 @@
   --green: #6D7345;
   --orange: #BF5630;
   --white: #F0F2F2;
+  --white-transparent: rgba(255, 255, 255, 0.95);
 
   /*Fonts*/
   --paragraphs: "Raleway", sans-serif;
