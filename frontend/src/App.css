@@ -184,6 +184,17 @@
 
 /* ↑↑ adopt article ↑↑ */
 
+/* ↓↓adopt-dogs__gallery↓↓ */
+
+@media (min-width: 768px){
+  .adopt-dogs__gallery{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
+}
+
+/* ↑↑adopt-dogs__gallery↑↑ */
 
 /* ↓↓adopt-nav↓↓ */
 .adopt-nav{

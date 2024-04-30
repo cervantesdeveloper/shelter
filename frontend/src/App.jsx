@@ -17,6 +17,8 @@ import Donate from './pages/Donate'
 import AdoptDetail from './pages/AdoptDetail'
 import LayoutHome from './layouts/LayoutHome'
 import LayoutAdopt from './layouts/LayoutAdopt'
+import AdoptProcess from './pages/AdoptProcess'
+import AdoptDogs from './pages/AdoptDogs'
 
 
 
@@ -27,12 +29,14 @@ function App() {
     <DeviceProvider>
       <Routes>
         <Route element={<LayoutHome />}>
+
           <Route index element={<Home />}/>
 
           <Route path='adopt' element={<LayoutAdopt />}>
             <Route index element={<Adopt />} />
+            <Route path='process' element={<AdoptProcess />} />
+            <Route path='dogs' element={<AdoptDogs />}/>
           </Route>
-
            
           <Route path='adopt/:id' element={<AdoptDetail />} />
           <Route path='volunteering' element={<Volunteering />}/>
