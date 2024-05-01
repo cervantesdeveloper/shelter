@@ -36,9 +36,10 @@ function App() {
             <Route index element={<Adopt />} />
             <Route path='process' element={<AdoptProcess />} />
             <Route path='dogs' element={<AdoptDogs />}/>
+            <Route path=':id' element={<AdoptDetail />} />
           </Route>
            
-          <Route path='adopt/:id' element={<AdoptDetail />} />
+          
           <Route path='volunteering' element={<Volunteering />}/>
           <Route path='about' element={<About />}/>
           <Route path='news' element={<News />} />

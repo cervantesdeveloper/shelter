@@ -184,6 +184,55 @@
 
 /* ↑↑ adopt article ↑↑ */
 
+/* ↓↓adopt-dog__card↓↓ */
+.adopt-dog__card{
+  border: .5px solid var(--green);
+  margin-bottom: 1.875rem;
+}
+
+.adopt-dog__card-media{
+  line-height: 0;
+}
+
+.adopt-dog__card-media img{
+  width: 100%;
+  height: auto;
+}
+
+.adopt-dog__text{
+  padding: 1.5rem ;
+  font-family: var(--paragraphs);
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.adopt-dog__text ul{
+  list-style: none;
+  color: var(--green);
+  font-weight: 700;
+}
+
+.adopt-dog__text ul li b{
+  color: var(--black);
+}
+
+.adopt-article__content{
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .adopt-dog__card{
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    align-items: center;
+  }
+}
+
+
+
+/* ↑↑adopt-dog__card↑↑ */
+
 /* ↓↓adopt-dogs__gallery↓↓ */
 
 @media (min-width: 768px){

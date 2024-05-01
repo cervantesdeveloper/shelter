@@ -23,7 +23,7 @@ const AdoptCard = ({name, picture, age, size, genre, id, link}) => {
                 </ul>
             </div> 
 
-            <Link className="btn btn-outlined" to={`./adopt/${link}`}>Conoceme</Link>
+            <Link className="btn btn-outlined" to={`${link}`}>Conoceme</Link>
 
         </div>
     )

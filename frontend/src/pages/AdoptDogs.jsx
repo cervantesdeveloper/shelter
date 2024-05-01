@@ -46,7 +46,7 @@ const AdoptDogs = () => {
                                         size={dog.size}
                                         genre={dog.gender}
                                         id={dog._id.slice(-4)}
-                                        link={dog._id}
+                                        link={`../${dog._id}`}
                                     />
                                 )
                             })
