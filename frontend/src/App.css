@@ -138,51 +138,6 @@
 }
 /* ↑↑ main adopt ↑↑ */
 
-/* ↓↓ adopt article ↓↓ */
-
-.adopt-article{
-  font-family: var(--paragraphs);
-  padding: 1.25rem;
-  color: var(--black);
-}
-
-.adopt-article__header{
-  font-size: 3rem;
-  font-weight: 900;
-  line-height: 1.5;
-  margin-top: 1.875rem;
-  margin-bottom: 1.875rem;
-}
-
-.adopt-article__subtle{
-  color: var(--green);
-  margin: 5rem 0 1.5rem;
-}
-
-.adopt-article__text,
-.adopt-article__list li{
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.adopt-article__list{
-  margin-left: 2rem;
-}
-
-.adopt-article__list li{
-  margin-bottom: 1.5rem;
-}
-
-@media (min-width: 1023px){
-  .adopt-article{
-    padding: 1.25rem;
-  }
-  .adopt-article__header{
-    margin-top: 0;
-  }
-}
-
-/* ↑↑ adopt article ↑↑ */
 
 /* ↓↓adopt-dog__card↓↓ */
 .adopt-dog__card{
@@ -357,6 +312,78 @@
 
 
 /******************** Adopt end ********************/
+
+/******************** Article start ********************/
+
+/* ↓↓ article ↓↓ */
+
+.article{
+  font-family: var(--paragraphs);
+  padding: 1.25rem;
+  color: var(--black);
+}
+
+.article__header{
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1.5;
+  margin-top: 1.875rem;
+  margin-bottom: 1.875rem;
+}
+
+.article__subtle{
+  color: var(--green);
+  margin: 5rem 0 1.5rem;
+}
+
+.article__text,
+.article__list li{
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.article__list{
+  margin-left: 2rem;
+}
+
+.article__list li{
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 1023px){
+  .article{
+    padding: 1.25rem;
+  }
+  .article__header{
+    margin-top: 0;
+  }
+}
+
+.article__mision{
+  border: .5px solid var(--green);
+  padding: 1.5rem;
+}
+
+.article__mision > *:last-child{
+  margin-bottom: 0;
+}
+
+/* ↑↑ article ↑↑ */
+
+
+/* ↓↓ article-about ↓↓ */
+
+.article-about p{
+  margin-bottom: 3rem;
+}
+
+.article-about p b{
+  color: var(--green)
+}
+
+/* ↑↑ article-about ↑↑ */
+
+/******************** Article end ********************/
 
 /******************** header star ********************/
 

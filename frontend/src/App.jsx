@@ -10,7 +10,6 @@ import { DeviceProvider } from './context/DeviceContext'
 
 import Home from './pages/Home'
 import Adopt from './pages/Adopt'
-import Volunteering from "./pages/Volunteering"
 import About from './pages/About'
 import News from './pages/News'
 import Donate from './pages/Donate'
@@ -19,6 +18,7 @@ import LayoutHome from './layouts/LayoutHome'
 import LayoutAdopt from './layouts/LayoutAdopt'
 import AdoptProcess from './pages/AdoptProcess'
 import AdoptDogs from './pages/AdoptDogs'
+import LayoutAbout from './layouts/LayoutAbout'
 
 
 
@@ -38,10 +38,12 @@ function App() {
             <Route path='dogs' element={<AdoptDogs />}/>
             <Route path=':id' element={<AdoptDetail />} />
           </Route>
+
+          <Route path='about' element={<LayoutAbout />}>
+            <Route index element={<About />}/>
+          </Route>
            
           
-          <Route path='volunteering' element={<Volunteering />}/>
-          <Route path='about' element={<About />}/>
           <Route path='news' element={<News />} />
           <Route path='donate' element={<Donate />}/>
         </Route>
