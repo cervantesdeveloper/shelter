@@ -2,10 +2,10 @@ import React from 'react'
 
 const AdoptProcess = () => {
   return (
-    <article className="adopt-article">
-        <h1 className="adopt-article__header">Proceso de adopción.</h1>
-        <h2 className="adopt-article__subtle">¿Estás listo para dar la bienvenida a tu nuevo mejor amigo en tu vida?</h2>
-        <ol className="adopt-article__list">
+    <article className="article">
+        <h1 className="article__header">Proceso de adopción.</h1>
+        <h2 className="article__subtle">¿Estás listo para dar la bienvenida a tu nuevo mejor amigo en tu vida?</h2>
+        <ol className="article__list">
             <li>
             <b>Comienza en nuestra página de perros adoptables</b>, puedes ver todos nuestros perros adoptables ahora. Tomate tu tiempo para leer sus características, así puedes aprender más sobre ellos y decidir si alguno encaja bien con tu familia y su estilo de vida.
             </li>
@@ -25,10 +25,10 @@ const AdoptProcess = () => {
             <b>Lleva a casa a tu nuevo amigo.</b> Una vez que el proceso de adopción está completo, estás listo para comenzar un nuevo viaje con tu mejor amigo. Estaremos aquí para ti después de la adopción.  
             </li>
         </ol>
-        <h2 className="adopt-article__subtle">
+        <h2 className="article__subtle">
             Notas respecto a la adopción.
         </h2>
-        <ul className="adopt-article__list">
+        <ul className="article__list">
             <li>
             <b>SANTUARIO se reserva el derecho de rechazar la adopción a quien sea por cualquier razón.</b>
             </li>

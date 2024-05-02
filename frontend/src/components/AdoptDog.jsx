@@ -7,7 +7,7 @@ const AdoptDog = ({name, picture, gender, age, description, size, id}) => {
 
     return (
         <>
-            <h1 className="adopt-article__header">{name}</h1>
+            <h1 className="article__header">{name}</h1>
             <figure className="adopt-dog__card">
                 <div className="adopt-dog__card-media">
                     <img src={picture} alt="name" />

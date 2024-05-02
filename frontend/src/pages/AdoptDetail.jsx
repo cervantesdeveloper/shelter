@@ -31,7 +31,7 @@ const AdoptDetail = () => {
 
     
     return (
-        <article className="adopt-article">
+        <article className="article">
             {
                 loading
                     ? <IconLoading />

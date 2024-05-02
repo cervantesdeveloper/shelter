@@ -1,29 +1,29 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
 
-const AdoptNav = () => {
-  return (
-    <nav className="pages-nav">
+const AboutNav = () => {
+    return (
+        <nav className="pages-nav">
         <div className="pages-nav__summary">
-            <Link to=".">Adoptar</Link>
+            <Link to=".">Nosotros</Link>
         </div>
         <div className="pages-nav__links">
             <NavLink 
-                to="process"
+                to="history"
                 className={({isActive})=> isActive ? "activeLink" : ""}
             >
-                Proceso de adopción
+                Nuestra Historia
             </NavLink>
 
             <NavLink 
-                to="dogs"
+                to="team"
                 className={({isActive})=> isActive ? "activeLink" : ""}
             >
-                Perros en adopción
+                Nuestro Equipo
             </NavLink>
         </div>
     </nav>
-  )
+    )
 }
 
-export default AdoptNav
+export default AboutNav

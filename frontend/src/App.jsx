@@ -19,6 +19,8 @@ import LayoutAdopt from './layouts/LayoutAdopt'
 import AdoptProcess from './pages/AdoptProcess'
 import AdoptDogs from './pages/AdoptDogs'
 import LayoutAbout from './layouts/LayoutAbout'
+import AboutHistory from './pages/AboutHistory'
+import AboutTeam from './pages/AboutTeam'
 
 
 
@@ -41,6 +43,8 @@ function App() {
 
           <Route path='about' element={<LayoutAbout />}>
             <Route index element={<About />}/>
+            <Route path='history' element={<AboutHistory />}/>
+            <Route path='team' element={<AboutTeam />}/>
           </Route>
            
           

@@ -28,8 +28,8 @@ const AdoptDogs = () => {
     }, [])
 
     return (
-        <article className='adopt-article'>
-            <h1 className="adopt-article__header"> Nuestros perros</h1>
+        <article className='article'>
+            <h1 className="article__header"> Nuestros perros</h1>
             {
                 loading
                 ? <IconLoading />

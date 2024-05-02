@@ -2,26 +2,27 @@ import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 
 import chevron from "../assets/chevronDown.svg";
+    
 
-const AdoptNavMobile = () => {
+const AboutNavMobile = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const revealLinks = ()=>{
         setIsMenuOpen(isMenuOpen => !isMenuOpen)
     }
-
+    
     return (
         <nav className={`pages-nav-mobile ${isMenuOpen ? "open" : "closed"}`}>
             <div className="pages-nav-mobile__summary">
-                <Link to="/adopt">Adoptar</Link>
+                <Link to="/about">Nosotros</Link>
                 <img className={isMenuOpen ? "open" : "closed"} src={chevron} alt="" onClick={revealLinks}/>
             </div>
             <div className="pages-nav-mobile__links">
-                <Link to="/adopt/process">Proceso de adopción</Link>
-                <Link to="/adopt/dogs">Perros en adopción</Link>
+                <Link to="/about/history">Nuestra Historia</Link>
+                <Link to="/about/team">Nuestro Equipo</Link>
             </div>
         </nav>
     )
 }
 
-export default AdoptNavMobile
+export default AboutNavMobile

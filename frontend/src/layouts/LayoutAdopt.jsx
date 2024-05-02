@@ -14,7 +14,7 @@ const LayoutAdopt = () => {
     return (
         <>
             <PagesHero image="adopt_hero.jpg" text="adopta un perro"/>
-            <main className='main-adopt'>
+            <main className='main-pages'>
                 {
                     isMobil
                         ? <AdoptNavMobile />
