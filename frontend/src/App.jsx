@@ -21,6 +21,7 @@ import AdoptDogs from './pages/AdoptDogs'
 import LayoutAbout from './layouts/LayoutAbout'
 import AboutHistory from './pages/AboutHistory'
 import AboutTeam from './pages/AboutTeam'
+import LayoutNews from './layouts/LayoutNews'
 
 
 
@@ -47,8 +48,10 @@ function App() {
             <Route path='team' element={<AboutTeam />}/>
           </Route>
            
+          <Route path='news' element={<LayoutNews />}>
+            <Route index element={<News />} />
+          </Route>
           
-          <Route path='news' element={<News />} />
           <Route path='donate' element={<Donate />}/>
         </Route>
         

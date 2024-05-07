@@ -820,6 +820,37 @@
 
 /******************** Loading end **************************/
 
+/******************** news__list start ********************/
+.news{
+  margin-top: 5rem;
+  font-family: var(--paragraphs);
+  color: var(--black);
+}
+.news__list{
+  margin-top: var(--header-height);
+}
+
+.news .article__header{
+  text-align: center;
+}
+
+@media (min-width: 768px){
+  .news__list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
+}
+
+@media (min-width: 1024px){
+  .news__list{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/******************** news__list end ********************/
+
 /******************** news-card start ********************/
 .news-card{
   border: 1px solid var(--green);
